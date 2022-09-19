@@ -45,11 +45,11 @@ public class RestaurantController {
 		return restaurant.getId();  
 	}  
 	//creating put mapping that updates the book detail   
-	@PutMapping("/restaurants")  
-	private Restaurant update(@RequestBody Restaurant restaurants)   
+	@PutMapping("/restaurant")  
+	private int updateRestaurant(@RequestBody Restaurant restaurant)   
 	{  
-		restaurantService.saveOrUpdate(restaurants);  
-		return restaurants;  
-	}  
+		restaurantService.saveOrUpdate(restaurant);  
+		return restaurant.getId();  
+	}
 
 }
